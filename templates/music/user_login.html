@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="http://localhost:8000/music/">Home</a>
     <h1>Login Page</h1>
     <div id="login-form">
         <form action="http://localhost:8000/music/login/" method="POST">
@@ -14,11 +15,15 @@
             <table>
                 <tr>
                     <td>Username:</td>
-                    <td><input type="text" name="username"></td>
+                    <td><input type="text" name="username" required></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><input type="password" name="password"></td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" required></td>
                 </tr>
                 <tr>
                     <td></td>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://localhost:8000/music/">Home</a>
+    <h1>Do you want to :</h1>
+    <form action="http://localhost:8000/music/savedata2/" method="post">
+        {% csrf_token %}
+    <select class="form-select" aria-label="Default select example" name="choice" required>
+        <option selected>Open this select menu</option>
+        <option value="1">See your Dashboard</option>
+        <option value="2">Add file as Private Mode</option>
+        <option value="3">Add file as Protected Mode</option>
+      </select>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Go"></td>
+    </tr>
+    </form>
+</body>
+</html>

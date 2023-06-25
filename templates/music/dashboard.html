@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://localhost:8000/music/">Home</a>
+    <a href="http://localhost:8000/music/logout/">Logout</a>
+    <h1>Hello, {{request.session.username}} Explore your music files</h1>
+<h1 >public music files:</h1>
+    <table>
+        <tr>
+            <th> music files name :</th>
+            
+            
+        </tr>
+        {% for rec in records %}
+        <tr>
+            <td>{{rec.file_name}}</td>
+            
+
+        </tr>
+        {% endfor %}
+
+    </table><br>
+    <h1 >private files:</h1>
+    <table>
+        <tr>
+            <th> music files names:</th>
+        </tr>
+        {% for rec in records1 %}
+        <tr>
+            <td>{{rec.file_name}}</td>
+            
+
+        </tr>
+        {% endfor %}
+    </table><br>
+</table>
+<h1>protected files:</h1>
+<table>
+    <tr>
+        <th> music files names:</th>
+    </tr>
+    {% for rec in records2 %}
+    <tr>
+        <td>{{rec.file_name}}</td>
+        
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
